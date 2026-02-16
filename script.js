@@ -23,12 +23,15 @@ function change_img(id, direction){
             }
     }
     const counter = counters[id];
-    if(direction == "inc"){ 
+    if(direction == true){ 
         increase_counter(counter);
     } 
-    else if(direction == "dec"){
+    else if(direction == false){
         decrease_counter(counter);
     }   
+    document.getElementById(id).src = "img/" + id + "/" + counter.current + ".PNG";
+}
+function update_img(id){
     document.getElementById(id).src = "img/" + id + "/" + counter.current + ".PNG";
 }
 
@@ -72,11 +75,15 @@ function read_url(){
     function get_params(id){
         const counter = counters[id];
         if (params.has(id)){
-            counters.flower.current = parseInt(params.get(id)); 
+            let val = parseInt(params.get(id)); 
             //check if valid
-            if(counter.current > counter.max){
+            if(val > counter.max || val <= 0|| NaN(val) ){ //Nan = Not an Number
                 counter.current = 1;
             }
+            else{
+                counter.current = val
+            }
+            update_img(id);
         }
     }
     //grab parameters from the url, URLSearchParams = helper object for query parameters, windows = browser window, location = current page url, search = url after "?" 
