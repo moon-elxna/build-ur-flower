@@ -4,6 +4,11 @@ img.building {
     left: 0px;
     width: 200px;
 }
+div#builder{
+    position: relative; /* allows absolute positioning of children */
+    width: 200px;       /* width of your image stack */
+    height: 300px;      /* height of your image stack */
+}
 
 #decor {
 z-index: 30;
@@ -16,3 +21,19 @@ z-index: 20;
 #stem {
 z-index: 10;
 }
+div#btn{
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    flex-direction:column;
+    gap: 5px; 
+}
+
+div#content {
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    flex-direction: row; 
+    gap: 5px;
+}
+
