@@ -1,3 +1,13 @@
+/*---body---*/
+@font-face {
+    font-family: "ElinaWeather";
+    src: url("https://moon-elxna.github.io/build-ur-flower/font/Elinaweather-Regular.ttf") format("truetype");
+    font-display: block;
+}
+body {
+    font-family: "ElinaWeather";
+}
+
 /*--div---*/
 div#content {
     display: flex;
@@ -35,6 +45,7 @@ z-index: 30;
 #stem {
 z-index: 10;
 }
+/*https://stackoverflow.com/questions/6488390/can-you-layer-pictures-on-top-of-each-other-on-a-webpage*/
 img.btn {
     width: 32px;
     height: 32px;
