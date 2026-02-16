@@ -22,9 +22,12 @@ function change_img(id, direction){
             }
     }
     const counter = counters[id];
-    if(direction == "inc"){ increase_counter(counter);} 
-    else if(direction == "dec"){decrease_counter(counter);}   
-    console.log("img/" + id + "/" + counter + ".PNG");
+    if(direction == "inc"){ 
+        increase_counter(counter);
+    } 
+    else if(direction == "dec"){
+        decrease_counter(counter);
+    }   
     document.getElementById(id).src = "img/" + id + "/" + counter.current + ".PNG";
 }
 
@@ -51,4 +54,32 @@ function download_img(){
     link.download = "ur_flower.png"
     //download starten
     link.click();
+}
+
+function share_url(){
+    //add parameters to link, "?parameter=value&parameter=value ..."
+    let url = "https://moon-elxna.github.io/build-ur-flower/?flower="+ counters.flower.current +"&stem=" + 
+        counters.stem.current + "&decor=" + counters.decor.current;
+    let text = "Check out my flower creation and build yours next!"
+    //write the string to the clipboard
+    navigator.clipboard.writeText(text + " " + url);
+}
+
+function read_url(){
+    //get params, params.get('') = grab the paramter from url, parseInt() = converts String to Integer
+    function get_params(id){
+        const counter = counters[id];
+        if (params.has(id)){
+            counters.flower.current = parseInt(params.get(id)); 
+            //check if valid
+            if(counter.current > counter.max){
+                counter.current = 1;
+            }
+        }
+    }
+    //grab parameters from the url, URLSearchParams = helper object for query parameters, windows = browser window, location = current page url, search = url after "?" 
+    const params = new URLSearchParams(window.location.search);
+    get_params("flower");
+    get_params("stem");
+    get_params("decor");
 }

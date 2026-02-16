@@ -1,11 +1,11 @@
 /*--div---*/
 @font-face {
-    font-family: Pixe;
-    src: url();
+    font-family: pixellari;
+    src: url("https://moon-elxna.github.io/build-ur-flower/font/Pixellari.ttf");
 }
 body{
     background-color: #ffe9ef;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: "pixellari";
     font-size: 24px;
     font-weight: bold;
     color: #000d18;
@@ -60,22 +60,15 @@ img.btn {
 button {
     font-size: 24px;
     border-radius: 4px;
-    border: none;
-    background-color: #fffafb;
-    padding: 4px 10px;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
-}
-
-button:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-}
-
-button:active {
-    background-color: #000d1884;
-}
-button.arr {
     background: transparent;
     border: none;
     outline: none;
+}
+
+button.tool:hover {
+    box-shadow: 0 4px 12px #ffffff;
+}
+
+button.tool:active {
+    background-color: #ffffff;
 }
