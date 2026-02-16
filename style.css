@@ -2,20 +2,28 @@ img.building {
     position: absolute;
     top: 0px;
     left: 0px;
-    width: 200px;
+    width: 250px;
 }
 div#builder{
-    position: relative; /* allows absolute positioning of children */
-    width: 200px;       /* width of your image stack */
-    height: 300px;      /* height of your image stack */
+    position: relative;
+    width: 250px;       
+    height: 500px;     
 }
-
+img.btn_arrow_icon {
+    width: 32px;
+    height: 32px;
+}
 #decor {
-z-index: 30;
+z-index: 20;
 }
 
 #flower {
-z-index: 20;
+z-index: 30;
+}
+button.btn {
+    background: transparent;  
+    border: none;            
+    outline: none;          
 }
 
 #stem {
