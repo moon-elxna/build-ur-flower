@@ -1,4 +1,3 @@
-
 const counters = {
     flower: { current: 1, max: 5 },
     stem: { current: 1, max: 5 },
@@ -25,4 +24,29 @@ function change_img(id, direction){
     else if(direction == "dec"){decrease_counter(counter);}   
     console.log("img/" + id + "/" + counter + ".PNG");
     document.getElementById(id).src = "img/" + id + "/" + counter.current + ".PNG";
+}
+
+function download_img(){
+    //neue canvas erstellen
+    const canvas = document.createElement("canvas");
+    canvas.width = 350;
+    canvas.height = 700;
+    // Zeichenwerzeug holen, ctx = context, 2d = 2d grafik
+    const ctx = canvas.getContext("2d");
+    //Bilder aus HTML holen
+    const flower_img = document.getElementById("flower");
+    const stem_img = document.getElementById("stem");
+    const decor_img = document.getElementById("decor");
+    //Bilder übereinader zeichen, 0,0 = oben-links Position
+    ctx.drawImage(stem_img,0,0);
+    ctx.drawImage(decor_img,0,0);
+    ctx.drawImage(flower_img,0,0);
+    //download link erstellen
+    const link = document.createElement("a");
+    // canvas zu png, toDataURL() = "Konvertiere Canvas zu PNG-Daten"
+    link.href = canvas.toDataURL("image/png");
+    //Dateiname setzen, 
+    link.download = "ur_flower.png"
+    //download starten
+    link.click();
 }
