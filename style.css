@@ -1,0 +1,18 @@
+img.building {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 200px;
+}
+
+#decor {
+z-index: 30;
+}
+
+#flower {
+z-index: 20;
+}
+
+#stem {
+z-index: 10;
+}
