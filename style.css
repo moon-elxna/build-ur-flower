@@ -44,16 +44,9 @@ img.building {
     left: 0px;
     width: 250px;
 }
-#decor {
-z-index: 20;
-}
-#flower {
-z-index: 30;
-}
-#stem {
-z-index: 10;
-}
-/*https://stackoverflow.com/questions/6488390/can-you-layer-pictures-on-top-of-each-other-on-a-webpage*/
+#decor { z-index: 20; }
+#flower { z-index: 30; }
+#stem { z-index: 10; }
 img.btn {
     width: 48px;
     height: 48px;
@@ -63,19 +56,14 @@ img.btn {
 button {
     font-size: 24px;
     border-radius: 4px;
-    border-width: 0px;
+    border: none;
     background-color: #fffafb;
-    padding-left: 10px;
-    padding-right: 10px;
-    padding-top: 4px;
-    padding-bottom: 4px;
+    padding: 4px 10px;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
 }
 
 button:hover {
-    box-shadow: 0 0 12px #000d1884 inset;
     transform: translateY(-2px);
-    /* Lift up */
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
@@ -83,7 +71,7 @@ button:active {
     background-color: #000d1884;
 }
 button.arr {
-    background: transparent;  
-    border: none;            
-    outline: none;          
+    background: transparent;
+    border: none;
+    outline: none;
 }
