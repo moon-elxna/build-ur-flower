@@ -1,9 +1,11 @@
+//main
 const counters = {
     flower: { current: 1, max: 5 },
     stem: { current: 1, max: 5 },
     decor: { current: 1, max: 4 }
 }
 
+//functions
 function change_img(id, direction){
     function decrease_counter(counter){
         if(counter.current == 1){
