@@ -1,34 +1,15 @@
-img.building {
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    width: 250px;
+/*--div---*/
+div#content {
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    flex-direction: row; 
+    gap: 5px;
 }
 div#builder{
     position: relative;
     width: 250px;       
     height: 500px;     
-}
-img.btn {
-    width: 32px;
-    height: 32px;
-}
-#decor {
-z-index: 20;
-}
-
-#flower {
-z-index: 30;
-}
-button {
-    background: transparent;  
-    border: none;            
-    outline: none;          
-}
-button#save
-
-#stem {
-z-index: 10;
 }
 div.btn{
     display: flex;
@@ -38,15 +19,30 @@ div.btn{
     gap: 5px; 
 }
 
-div#content {
-    display: flex;
-    justify-content: center; 
-    align-items: center; 
-    flex-direction: row; 
-    gap: 5px;
+/*---img---*/
+img.building {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 250px;
 }
-div#content > div {
-    
+#decor {
+z-index: 20;
+}
+#flower {
+z-index: 30;
+}
+#stem {
+z-index: 10;
+}
+img.btn {
+    width: 32px;
+    height: 32px;
 }
 
-
+/*---btn---*/
+button.arr {
+    background: transparent;  
+    border: none;            
+    outline: none;          
+}
