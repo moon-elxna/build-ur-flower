@@ -23,9 +23,6 @@ function change_img(id, flag){
     }   
     document.getElementById(id).src = "img/" + id + "/" + counter.current + ".PNG";
 }
-function update_img(id){
-    document.getElementById(id).src = "img/" + id + "/" + counter.current + ".PNG";
-}
 
 function download_img(){
     //neue canvas erstellen
@@ -78,7 +75,7 @@ function read_url(){
             else{
                 counter.current = val
             }
-            update_img(id);
+            document.getElementById(id).src = "img/" + id + "/" + counter.current + ".PNG";
         }
     }
     //grab parameters from the url, URLSearchParams = helper object for query parameters, windows = browser window, location = current page url, search = url after "?" 
