@@ -72,6 +72,7 @@ button {
 button.tool{
     background: #fffafb;
     padding: 6px;
+    margin: 4px;
 }
 button.tool:active {
     background-color: #ffe9ef;
