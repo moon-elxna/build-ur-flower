@@ -132,10 +132,14 @@ function read_local_storage(){
 
     function get_item(id){
         const counter = counters[id];
-        let test = parseInt(localStorage.getItem(id));
-        if(test != null || test <= counter.max || test > 0){
+        let test = localStorage.getItem(id);
+        if(test != null){
+            test = parseInt(test);
+            if(test <= counter.max && test > 0){
             counter.current = test; 
         }
+        }
+        
     }
     get_item("flower"); 
     get_item("stem"); 
