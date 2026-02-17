@@ -36,17 +36,18 @@ div#content {
     transition: all 0.3s ease;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
 }
-
-div#div_around_builder{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
+div#in_builder{
+    width: 250px;
+    height: 500px;
 }
 
 div#builder{
     position: relative;
     width: 250px;       
     height: 500px;  
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
 }
 
 div.btn{
@@ -66,7 +67,6 @@ img.building {
 }
 img.btn {
     width: 48px;
-    height: auto;
 }
 img#decor { z-index: 20; }
 img#flower { z-index: 30; }
@@ -91,42 +91,49 @@ button.tool:active {
 }
 
 @media(max-width: 700px){
-    /*--div---*/
     div#header{
         flex-direction: column;
         gap: 8px;
         padding-bottom: 32px;
     } 
-
     div#content {  
         padding: 64px 16px;
         gap: 0px;
-        max-width: min-content;
     }
     div#builder{
+        display: flex;
+        flex-direction: row;
         position: relative;
-        width: 150px;       
-        height: 300px;  
+        justify-content: center;
+        width: 200px;       
+        height: 400px;  
         padding: 0px;
         margin: 0px;
     }
-
-    /*---img---*/
     img.building {
-      width: 150px;
+      width: 200px;
     }
 }
 
-@media(max-width: 350px){
+@media(max-width: 320px){
     div#title{
         font-weight: bold;
         font-size: 30px
     }
-
     div#header{
         padding-bottom: 16px;
     } 
     div#content {  
         padding: 32px 8px;
+    }
+    div#builder{
+        width: 150px;       
+        height: 300px;  
+    }
+    img.building {
+      width: 150px;
+    }
+    img.btn{
+        width: 32px;
     }
 }
