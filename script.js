@@ -45,7 +45,7 @@ function share_url(){
 
 function download_img(){
     const img_name = new Image();
-    img_name.src = "img/name.png";
+    img_name.src = "assets/name.png";
     img_name.onload = () => {
         //neue canvas erstellen
         const canvas = document.createElement("canvas");
@@ -93,7 +93,7 @@ function read_url(){
             else{
                 counter.current = val
             }
-            document.getElementById(id).src = "img/" + id + "/" + counter.current + ".PNG";
+            document.getElementById(id).src = "assets/" + id + "/" + counter.current + ".PNG";
             flag = true
         }
         else if(flag == false) {
@@ -130,6 +130,6 @@ function change_img(id, flag){
     else if(flag == false){
         decrease_counter(counter);
     }   
-    document.getElementById(id).src = "img/" + id + "/" + counter.current + ".PNG";
+    document.getElementById(id).src = "assets/" + id + "/" + counter.current + ".PNG";
     write_local_storage();
 }
