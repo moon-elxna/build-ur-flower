@@ -9,15 +9,19 @@ read_url();
 
 //---addEventListeners---
 //left btns
-for(let i = 0; i<parts.length; i++){
-    document.getElementById("l_btn_" + parts[i]).addEventListener("click", change_img(parts[i], false))
-}
+arr_btn("l", false);
 //right btns
-for(let i = 0; i<parts.length; i++){
-    document.getElementById("r_btn_" + parts[i]).addEventListener("click", change_img(parts[i], true))
+arr_btn("r", true);
+//tool btn
+document.getElementById("btn_dwn").addEventListener("click", function(){download_img()});
+document.getElementById("btn_share").addEventListener("click", function(){share_url()})
+//---functions---
+function arr_btn(dir, flag){
+    for(let i = 0; i<parts.length; i++){
+    document.getElementById(dir +"_btn_" + parts[i]).addEventListener("click", function(){change_img(parts[i], flag)})
+    }
 }
 
-//---functions---
 function read_local_storage(){
     function get_item(id){
         const counter = counters[id];
