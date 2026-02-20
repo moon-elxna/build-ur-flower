@@ -55,7 +55,7 @@ function share_url(){
     let text = "Check out my flower creation and build yours next!"
     //write the string to the clipboard
     navigator.clipboard.writeText(url);
-    alert("Link copied to clipboard!");
+    alert("Link to your flower was copied to your clipboard!");
 }
 
 function download_img(){
