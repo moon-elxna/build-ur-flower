@@ -1,4 +1,4 @@
-//main
+//---main---
 const counters = {
     flower: { current: 1, max: 5},
     stem: { current: 1, max: 5},
@@ -7,7 +7,17 @@ const counters = {
 const parts = ["stem", "decor","flower"]
 read_url();
 
-//functions
+//---addEventListeners---
+//left btns
+for(let i = 0; i<parts.length; i++){
+    document.getElementById("l_btn_" + parts[i]).addEventListener("click", change_img(parts[i], false))
+}
+//right btns
+for(let i = 0; i<parts.length; i++){
+    document.getElementById("r_btn_" + parts[i]).addEventListener("click", change_img(parts[i], true))
+}
+
+//---functions---
 function read_local_storage(){
     function get_item(id){
         const counter = counters[id];
